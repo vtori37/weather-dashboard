@@ -11,7 +11,7 @@
 
 ## Website
 Here is a link to the live website:
-[Word Day Scheduler](https://vtori37.github.io/weather-dashboard/)
+[Weather Dashboard](https://vtori37.github.io/weather-dashboard/)
 
 
 ## Author
