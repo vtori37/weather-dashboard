@@ -27,7 +27,7 @@ function searchBtn() {
   var city = getCity.value;
   
   searchCity(city);
-  
+
 }
 
 
@@ -68,10 +68,7 @@ function searchCity(city) {
   
   
             // For loop for five day forecast
-      for (var i=1; i < data.list[6].length; i++) {
-      // for (var i=1; i < 6; i++) {
-        var lon = data.coord.lon;
-        var lat = data.coord.lat;
+      for (var i=1; i < data.dailyLength; i++) {
         var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}${apiKey}` 
         fetch(url)
         .then(function(response){
@@ -81,9 +78,7 @@ function searchCity(city) {
           // console.log(data.list[0].weather[0].icon);
           console.log(data.list);
         })
-        function fiveDayForecast () {
-
-        }
+        
         // console.log(tempFive.textContent);
         // dateFive.textContent = data.name;
         // iconFive.textContent = "Temperature: " + data.main.temp + "°F    " + "Feels like: " + data.main.feels_like + "°";
