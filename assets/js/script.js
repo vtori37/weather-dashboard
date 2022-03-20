@@ -8,12 +8,22 @@ var tempLoHiEl= document.getElementById("tempLoHi");
 var windEl= document.getElementById("wind");
 var humidityEl= document.getElementById("humidity");
 var uvEl= document.getElementById("uvIndex");
-var iconEl = document.getElementById("icon");
+
+var date = document.querySelector(".dateFiveDay");
+var icon = document.querySelector(".iconFiveDay");
+var temp = document.querySelector(".tempFiveDay");
+var wind = document.querySelector(".windFiveDay");
+var humidity = document.querySelector(".humidityFiveDay");
+
+
+
+
+
 
 // Date and Time
 dateEL.textContent = moment().format("dddd, MMM, DD, YYYY, h:mm a");
 
-//listens to user clicking the button; sends user input to searchCity
+// Listens to user clicking the button; sends user input to searchCity
 function searchBtn() {
   // preventDefault(); //prevents 
   console.log(getCity);
@@ -43,24 +53,90 @@ function searchCity(city) {
            return response.json();
          })
          .then(function(data){
-           console.log(data.list[0].weather[0].icon);
-          //  console.log(data.list[0].weather.icon)
-          //  console.log(lat);
+          console.log(data.list[0]);
+          //  console.log(data.list[0].weather[0].icon);
+           console.log(data.list.length);
          })
  
-       
+       // Displaying the data results to their respective html elements
       chosenCityEl.textContent = data.name;
-      tempEl.textContent = "Temperature: " + data.main.temp + "°F " + "Feels like: " + data.main.feels_like + "°";
+      tempEl.textContent = "Temperature: " + data.main.temp + "°F    " + "Feels like: " + data.main.feels_like + "°";
       tempLoHiEl.textContent = "High/Low: "  + data.main.temp_max + "°" + data.main.temp_min  + "°" ;
       windEl.textContent = "Wind: " + data.wind.speed + "mph";
       humidityEl.textContent = "Humidity: " + data.main.humidity + "%";
+      // const icon = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon || '@2x.png'}`
+      // const iconEl= document.getElementById("icon");
+      // const html = (` <p><img class="icon" src="${icon}"></p>`)
+   
+      for (var i=1; i < 6; i++) {
+        var lon = data.coord.lon;
+        var lat = data.coord.lat;
+        var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}${apiKey}` 
+        fetch(url)
+        .then(function(response){
+          return response.json();
+        })
+        .then(function(data){
+         console.log(data.daily);
+         //  console.log(data.list[0].weather[0].icon);
+          // console.log(data.list);
+        })
+  
+          // console.log(data.list.length);
+       }
 
-    }) 
-      .catch(function(error){
-        console.log(error);
-      })
-    };
+      // .catch(function(error){
+      //   console.log(error);
+      // })
 
+   })  
+};
+
+
+     // five day forecast
+// function fiveSearchCity(fiveCity) {    
+//   fetch(baseUrl + fiveCity + apiKey)
+//   .then(function(response){
+//       return response.json();
+//   })
+//   .then(function(data){
+//     //  console.log(data);
+//     //  console.log(data);
+    
+//     var lon = data.coord.lon;
+//     var lat = data.coord.lat;
+
+//       var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}${apiKey}` 
+//        fetch(url)
+//        .then(function(response){
+//          return response.json();
+//        })
+//        .then(function(data){
+//           console.log(data.list.length);
+
+//         })
+
+        // for (var i=0; i < data.length; i++) {
+
+        // // var dataFiveDay = 
+
+        // // // Displaying the data results to their respective html elements
+        // // chosenCityEl.textContent = data.name;
+        // // tempEl.textContent = "Temperature: " + data.main.temp + "°F    " + "Feels like: " + data.main.feels_like + "°";
+        // // tempLoHiEl.textContent = "High/Low: "  + data.main.temp_max + "°" + data.main.temp_min  + "°" ;
+        // // windEl.textContent = "Wind: " + data.wind.speed + "mph";
+        // // humidityEl.textContent = "Humidity: " + data.main.humidity + "%";
+        // } 
+        // console.log(data.list[1])
+        // console.log(data.list[1].weather[0]
+
+
+        // .catch(function(error){
+        //     console.log(error);
+        //   })    
+// };
+      
+    
 
 // //function to get api data
 // function searchCity(city) {
@@ -88,27 +164,7 @@ function searchCity(city) {
 //         console.log(error);
 //       })
 //     };
-// function fiveSearchCity(city) {    
-
-//        var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}${apiKey}` 
-//         fetch(url)
-//         .then(function(response){
-//           return response.json();
-//         })
-//         .then(function(data){
-//           var lonFive = data.coord.lon;
-//           var latFive = data.coord.lat;
-//           console.log(data.list[0]);
-//           console.log(lat);
-//         })
-
-//     .catch(function(error){
-//         console.log(error);
-//       })
-      
-
-// };
-
+// 
 //do if statements in search button and to make sure responses are ok
 
 
