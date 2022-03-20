@@ -23,15 +23,21 @@ function searchCity(city) {
     .then(function(data){
       //  console.log(data);
       //  console.log(data.coord);
+      
+      var lon = data.coord.lon;
+      var lat = data.coord.lat;
        var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}${apiKey}` 
         fetch(url)
         .then(function(response){
           return response.json();
         })
         .then(function(data){
-          console.log(data);
-          console.log(data.list[0]);
+          // console.log(data);
+          // console.log(data.list[0]);
         })
+
+        console.log(lon);
+        console.log(lat);
     })
     .catch(function(error){
         console.log(error);
