@@ -16,6 +16,7 @@
 <body>
   <header class="header">
     <h1>Weather Dashboard</h1>
+    <p id="date">Date</p>
   </header>
 
   <div class="row m-3">
@@ -39,12 +40,12 @@
     </section>
 
     <section class="col-6">
-      <h2 id="chosen-city"></h2>
-      <h2 id="date">Date</h2>
-      <p id="temp">Tem</p>
+      <h2 id="chosenCity">City...</h2>
+      <p id="temp">Temperature:</p>
+      <p id="tempLoHi"></p>
       <p id="wind">Wind</p>
       <p id="humidity">humidity</p>
-      <p id="uv-index">UV Index</p>
+      <p id="uvIndex">UV Index</p>
     </section>
   </div>
   <section>
@@ -58,6 +59,7 @@
     </div>
   </section>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
