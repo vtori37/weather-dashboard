@@ -27,6 +27,7 @@ function searchBtn() {
   var city = getCity.value;
   
   searchCity(city);
+  
 }
 
 
