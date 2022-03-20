@@ -14,50 +14,53 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1>Weather Dashboard</h1>
-    <p id="date">Date</p>
+  <header class="header jumbotron jumbotron-fluid">
+    <div class="text-center">
+      <h1>Weather Dashboard</h1>
+      <p id="date">Date</p>
+      <img>
+    </div>
   </header>
 
+
   <div class="row m-3">
-    <section class="usersCity">
-      <div class="col-6">
+    <section class="usersCity col-6 col-offset-3">
+      <div class="container">
         <h2>Search for a City:</h2>
-        <input id="userCityInput" placeholder="City..." />
-        <button id="citySearch" onclick="searchBtn()">Search</button>
+        <input class="form-control" id="userCityInput" placeholder="City..." />
+        <button type="button" class="btn btn-outline-info btn-block" id="citySearch"
+          onclick="searchBtn()">Search</button>
       </div>
 
       <!-- <div class="city-buttons"> this is suppose to be search historyyyyy -->
       <!-- <button>Austin</button>
-        <button>Chicago</button>
-        <button>New York</button>
-        <button>Orlando</button>
-        <button>San Francisco</button>
-        <button>Seattle</button>
-        <button>Denver</button>
-        <button>Atlanta</button>
-      </div> -->
+        </div> -->
     </section>
 
-    <section class="col-6">
+    <section class="container col-6 col-offset-3">
       <h2 id="chosenCity">City...</h2>
       <p id="temp">Temperature:</p>
       <p id="tempLoHi"></p>
-      <p id="wind">Wind</p>
-      <p id="humidity">humidity</p>
-      <p id="uvIndex">UV Index</p>
+      <p id="wind">Wind:</p>
+      <p id="humidity">Humidity:</p>
+      <p id="uvIndex">UV Index:</p>
+    </section>
+    <!-- </div> -->
+  </div>
+
+  <div class="row">
+    <section class="container col-11">
+      <h3>5-Day Forecast:</h3>
+      <div>
+        <p class=" 5d-date">
+        </p>
+        <icon class="5d-icon"></icon>
+        <p class="5d-temp"></p>
+        <p class="5d-wind"></p>
+        <p class="5d-humidity"></p>
+      </div>
     </section>
   </div>
-  <section>
-    <h3>5-Day Forecast:</h3>
-    <div>
-      <p class="5d-date"></p>
-      <icon class="5d-icon"></icon>
-      <p class="5d-temp"></p>
-      <p class="5d-wind"></p>
-      <p class="5d-humidity"></p>
-    </div>
-  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
