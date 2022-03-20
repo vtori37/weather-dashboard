@@ -8,6 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&family=Montserrat:wght@200;300;400;500&family=Open+Sans:wght@400;600;700&family=Staatliches&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/stylesheet.css" />
   <title>Weather Dashboard</title>
 </head>
@@ -17,34 +18,35 @@
     <h1>Weather Dashboard</h1>
   </header>
 
-  <section class="city-search">
-    <div>
-      <h2>Search for a City:</h2>
-      <input class="" placeholder="City..." />
-      <button onclick="searchBtn()">Search</button>
-    </div>
+  <div class="row m-3">
+    <section class="usersCity">
+      <div class="col-6">
+        <h2>Search for a City:</h2>
+        <input id="userCityInput" placeholder="City..." />
+        <button id="citySearch" onclick="searchBtn()">Search</button>
+      </div>
 
-    <div class="city-buttons">
-      <button>Austin</button>
-      <button>Chicago</button>
-      <button>New York</button>
-      <button>Orlando</button>
-      <button>San Francisco</button>
-      <button>Seattle</button>
-      <button>Denver</button>
-      <button>Atlanta</button>
-    </div>
-  </section>
+      <!-- <div class="city-buttons"> this is suppose to be search historyyyyy -->
+      <!-- <button>Austin</button>
+        <button>Chicago</button>
+        <button>New York</button>
+        <button>Orlando</button>
+        <button>San Francisco</button>
+        <button>Seattle</button>
+        <button>Denver</button>
+        <button>Atlanta</button>
+      </div> -->
+    </section>
 
-  <section>
-    <h2 id="chosen-city"></h2>
-    <h2 id="date">Date</h2>
-    <p id="temp">Tem</p>
-    <p id="wind">Wind</p>
-    <p id="humidity">humidity</p>
-    <p id="uv-index">UV Index</p>
-  </section>
-
+    <section class="col-6">
+      <h2 id="chosen-city"></h2>
+      <h2 id="date">Date</h2>
+      <p id="temp">Tem</p>
+      <p id="wind">Wind</p>
+      <p id="humidity">humidity</p>
+      <p id="uv-index">UV Index</p>
+    </section>
+  </div>
   <section>
     <h3>5-Day Forecast:</h3>
     <div>
