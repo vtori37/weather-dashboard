@@ -126,7 +126,7 @@ function fiveDayForecast(cityFive) {
       
       
     
-      for (var i=1; i < data.daily.length; i++) {  
+      for (var i=0; i < data.daily.length; i++) {  
         // var dateFive = document.getElementById("dateFiveDay");
         // var iconFive = document.getElementById("iconFiveDay");
         // var tempFive = document.getElementById("tempFiveDay");
