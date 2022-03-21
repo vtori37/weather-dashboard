@@ -52,7 +52,7 @@ function searchCity(city) {
             console.log(data.list[0]);
             //  console.log(data.list[0].weather[0].icon);
              console.log(data.list);
-           })
+            })
    
          // Displaying the data results to their respective html elements
       
@@ -72,8 +72,8 @@ function searchCity(city) {
         // for (var i=0; i < 6; i++) {
         //   console.log(data.list.[1].);
         // }
-        
-      }) 
+      })
+    
   
         .catch(function(error){
           console.log(error);
@@ -116,7 +116,7 @@ function fiveDayForecast(cityFive) {
           console.log(data.list[0]);
           //  console.log(data.list[0].weather[0].icon);
            console.log(data.list[2].clouds);
-         })
+          
  
     //    // For loop for five day forecast
     // for (var i=1; i < data.dailyLength; i++) {
@@ -128,7 +128,7 @@ function fiveDayForecast(cityFive) {
       
       
     
-      for (var i=0; i < data.daily.length; i++) {  
+      for (var i=0; i < data.list[6].length; i++) {  
         var dateFive = document.getElementById("dateFiveDay");
         var iconFive = document.getElementById("iconFiveDay");
         var tempFive = document.getElementById("tempFiveDay");
@@ -143,10 +143,8 @@ function fiveDayForecast(cityFive) {
       };
 
 
-
-// var uvIndexFive = document.getElementsByClassName(".uvIndexFiveDay")
-
-          
+    })
+      // var uvIndexFive = document.getElementsByClassName(".uvIndexFiveDay")          
     }) 
 
       .catch(function(error){
