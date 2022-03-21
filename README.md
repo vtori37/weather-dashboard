@@ -2,7 +2,7 @@
 ![alt text](./assets/Images/.png)
 
 ## Description 
-
+This application serves as a weather forecast dashboard for the user's city of choice. When a user searches up a city, the dashboard will display the city's current temperature, wind speed, humidity percentage, and the UV index. Users will also receive a forecast of the next five days.
 
 ## Table of Contents 
 * [Website](#website)
@@ -17,12 +17,8 @@ Here is a link to the live website:
 ## Author
 [Victoria Rice](https://github.com/vtori37)
 
-<!-- ## Contributors
-The following individuals helped to assist me in building this code:
+## Contributors
 * [Jamel James](https://github.com/jrj-sys)
-* [Paul Soliz](https://github.com/ModiFir3)
-* [Thomas "Xander" Hamilton](https://github.com/tsadiktalmudim)
-* [Lucio Davila](https://github.com/Lucio-001) -->
 
 ## Credits
 * HTML5
