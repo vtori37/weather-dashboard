@@ -21,8 +21,10 @@ function searchBtn() {
   // console.log(getCity);
   // console.log(getCity.value);
   var city = getCity.value;
+  var cityFive = getCity.value;
   
   searchCity(city);
+  fiveDayForecast(cityFive);
 
 }
 
@@ -118,20 +120,20 @@ function fiveDayForecast(cityFive) {
  
     //    // For loop for five day forecast
     // for (var i=1; i < data.dailyLength; i++) {
-      var dateFive = document.getElementById("dateFiveDay");
-      var iconFive = document.getElementById("iconFiveDay");
-      var tempFive = document.getElementById("tempFiveDay");
-      var windFive = document.getElementById("windFiveDay");
-      var humidityFive = document.getElementById("humidityFiveDay");
+      // var dateFive = document.getElementById("dateFiveDay");
+      // var iconFive = document.getElementById("iconFiveDay");
+      // var tempFive = document.getElementById("tempFiveDay");
+      // var windFive = document.getElementById("windFiveDay");
+      // var humidityFive = document.getElementById("humidityFiveDay");
       
       
     
       for (var i=0; i < data.daily.length; i++) {  
-        // var dateFive = document.getElementById("dateFiveDay");
-        // var iconFive = document.getElementById("iconFiveDay");
-        // var tempFive = document.getElementById("tempFiveDay");
-        // var windFive = document.getElementById("windFiveDay");
-        // var humidityFive = document.getElementById("humidityFiveDay");
+        var dateFive = document.getElementById("dateFiveDay");
+        var iconFive = document.getElementById("iconFiveDay");
+        var tempFive = document.getElementById("tempFiveDay");
+        var windFive = document.getElementById("windFiveDay");
+        var humidityFive = document.getElementById("humidityFiveDay");
         dateFive.textContent = data.name;
         iconFive.textContent = "Temperature: " + data.main.temp + "°F    " + "Feels like: " + data.main.feels_like + "°";
         tempFive.textContent = "High/Low: "  + data.main.temp_max + "°" + data.main.temp_min  + "°" ;
@@ -144,10 +146,6 @@ function fiveDayForecast(cityFive) {
 
 // var uvIndexFive = document.getElementsByClassName(".uvIndexFiveDay")
 
- // .catch(function(error){
-    //   console.log(error);
-    // })
- 
           
     }) 
 
