@@ -28,6 +28,8 @@ The following individuals helped to assist me in building this code:
 * HTML5
 * CSS 
 * JS
+* Bootstrap
+* Moment.js
 --- 
 
 

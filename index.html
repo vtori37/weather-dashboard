@@ -13,7 +13,7 @@
   <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="pb-5">
   <header class="header jumbotron jumbotron-fluid">
     <div class="text-center">
       <h1>Weather Dashboard</h1>
@@ -39,7 +39,7 @@
 
     <section class="container col-6 col-offset-3">
       <h2 id="chosenCity">City...</h2>
-      <div><img id="icon"></div>
+      <img src="" id="icon">
       <p id="temp">Temperature:</p>
       <p id="tempLoHi"></p>
       <p id="wind">Wind:</p>
@@ -49,59 +49,59 @@
     <!-- </div> -->
   </div>
 
-  <div class="row">
-    <section class="container col-11">
-      <h3>5-Day Forecast:</h3>
+  <div class="container">
+    <section class="row">
+      <h3 class="col-12">5-Day Forecast:</h3>
 
-      <div id="fiveDay">
-        <p id="day"></p>
-        <p id="dateFiveDay"></p>
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay day">Date:</p>
         <icon id="iconFiveDay"></icon>
-        <p id="tempFiveDay"></p>
-        <p id="windFiveDay"></p>
-        <p id="humidityFiveDay"></p>
-      </div>
-      <!-- 
-      <div id="fiveDay">
-        <p id="day"></p>
-        <p id="dateFiveDay"></p>
-        <icon id="iconFiveDay"></icon>
-        <p id="tempFiveDay"></p>
-        <p id="windFiveDay"></p>
-        <p id="humidityFiveDay"></p>
+        <p id="tempFiveDay">Temperature:</p>
+        <p id="windFiveDay">Wind:</p>
+        <p id="humidityFiveDay">Humidity</p>
+        <p id="uvIndexFiveDay">UV Index:</p>
       </div>
 
-      <div id="fiveDay">
-        <p id="day"></p>
-        <p id="dateFiveDay"></p>
-        <icon id="iconFiveDay"></icon>
-        <p id="tempFiveDay"></p>
-        <p id="windFiveDay"></p>
-        <p id="humidityFiveDay"></p>
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p class="dateFiveDay day">Date:</p>
+        <icon class="iconFiveDay"></icon>
+        <p class="tempFiveDay">Temperature:</p>
+        <p class="windFiveDay">Wind:</p>
+        <p class="humidityFiveDay">Humidity</p>
+        <p class="uvIndexFiveDay">UV Index:</p>
       </div>
 
-      <div id="fiveDay">
-        <p id="day"></p>
-        <p id="dateFiveDay"></p>
-        <icon id="iconFiveDay"></icon>
-        <p id="tempFiveDay"></p>
-        <p id="windFiveDay"></p>
-        <p id="humidityFiveDay"></p>
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p class="dateFiveDay day">Date:</p>
+        <icon class="iconFiveDay"></icon>
+        <p class="tempFiveDay">Temperature:</p>
+        <p class="windFiveDay">Wind:</p>
+        <p class="humidityFiveDay">Humidity</p>
+        <p class="uvIndexFiveDay">UV Index:</p>
       </div>
 
-      <div id="fiveDay">
-        <p id="day"></p>
-        <p id="dateFiveDay"></p>
-        <icon id="iconFiveDay"></icon>
-        <p id="tempFiveDay"></p>
-        <p id="windFiveDay"></p>
-        <p id="humidityFiveDay"></p>
-      </div> -->
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p class="dateFiveDay day">Date:</p>
+        <icon class="iconFiveDay"></icon>
+        <p class="tempFiveDay">Temperature:</p>
+        <p class="windFiveDay">Wind:</p>
+        <p class="humidityFiveDay">Humidity</p>
+        <p class="uvIndexFiveDay">UV Index:</p>
+      </div>
+
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p class="dateFiveDay day">Date:</p>
+        <icon class="iconFiveDay"></icon>
+        <p class="tempFiveDay">Temperature:</p>
+        <p class="windFiveDay">Wind:</p>
+        <p class="humidityFiveDay">Humidity</p>
+        <p class="uvIndexFiveDay">UV Index:</p>
+      </div>
     </section>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
